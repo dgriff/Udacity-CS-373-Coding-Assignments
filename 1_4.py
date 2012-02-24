@@ -22,8 +22,15 @@ def show(p):
 #HOMEWORK TO BE GRADED
 #INCORRECT
 
-p = []
+def init_probability_distribution():
+    p = []
+    sizey = len(colors)
+    sizex = len(colors[0])
+    uniform = 1. / (sizey * sizex)
+    p = [[[uniform] for x in range(sizex)] for y in range(sizey)]
+    return p
 
+p = init_probability_distribution()
 
 
 
